@@ -17,4 +17,4 @@
 6. Медиазапросы
 7. Формы
 
-[Ссылка для прехода к проекту] (https://murmonster.github.io/mesto/)
+[Ссылка для прехода к проекту] (https://murmonster.github.io/mesto-project/)
