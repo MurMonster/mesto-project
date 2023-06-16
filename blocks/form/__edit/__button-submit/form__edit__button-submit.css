@@ -1,0 +1,24 @@
+.form__edit__button-submit{
+    margin: 48px auto 0;
+    width:358px;
+    height: 50px;
+    background: #000000;
+    border-radius: 2px;
+    color: #ffffff;
+    display: block;
+    opacity: 1;
+}
+
+.form__edit__button-submit:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media (max-width:320px){
+    .form__edit__button-submit{
+        width: 238px;
+        height: 46px;
+        margin-top: 45px;
+    }
+    
+}

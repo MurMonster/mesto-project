@@ -1,0 +1,44 @@
+@import url(../blocks/page/page.css);
+@import url(../styles/fonts/fonts.css);
+@import url(../vendor/normalize.css);
+
+@import url(../blocks/form/form.css);
+@import url(../blocks/form/__edit/form__edit.css);
+@import url(../blocks/form/__edit/__container/form__edit__container.css);
+@import url(../blocks/form/__edit/__button-submit/form__edit__button-submit.css);
+@import url(../blocks/form/__edit/__heading/form__edit__heading.css);
+@import url(../blocks/form/__edit/__input-container/form__edit__input-container.css);
+@import url(../blocks/form/__edit/__item/form__edit__item.css);
+@import url(../blocks/form/__edit/__item/__el-description/form__edit__item__el-description.css);
+@import url(../blocks/form/__edit/__item/__el-heading/form__edit__item__el-heading.css);
+@import url(../blocks/form/__edit/__button-close/form__edit__button-close.css);
+@import url(../blocks/form-background/form-background.css);
+
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__info/__title/profile__title.css);
+@import url(../blocks/profile/__info/__subtitle/profile__subtitle.css);
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__button_add/profile__button_add.css);
+@import url(../blocks/profile/__button_edit/profile__button_edit.css);
+@import url(../blocks/profile/__text/profile__text.css);
+@import url(../blocks/profile/__container/profile__container.css);
+
+@import url(../blocks/elements/elements.css);
+
+@import url(../blocks/element/element.css);
+@import url(../blocks/element/__text/element__text.css);
+@import url(../blocks/element/__group/element__group.css);
+@import url(../blocks/element/__mask-group/element__mask-group.css);
+@import url(../blocks/element/__rectangle/element__rectangle.css);
+@import url(../blocks/element/__image/element__image.css);
+@import url(../blocks/element/__title/element__title.css);
+@import url(../blocks/element/__title/__title-icon/element__title-icon.css);
+@import url(../blocks/element/__title/__title-text/element__title-text.css);
+@import url(../blocks/element/__container/element__container.css);
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyrigh.css);

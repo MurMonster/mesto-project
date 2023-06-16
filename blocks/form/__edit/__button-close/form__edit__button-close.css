@@ -1,0 +1,25 @@
+.form__edit__button-close{
+    background-size: contain;
+    background-color: transparent;
+    background-image: url("../../../../images/Close Icon.png");
+    height: 32px;
+    width: 32px;
+    padding: 0;
+    border-style: none;
+    margin: 0 0 8px 8px;
+    opacity: 1;
+}
+
+.form__edit__button-close:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media (max-width:320px){
+    .form__edit__button-close{
+        width:20px;
+        height:20px;
+        margin: 0 0 16px 0;
+    }
+    
+}

@@ -1,0 +1,9 @@
+.profile__info{
+    display: flex;
+}
+
+@media (max-width:320px){
+    .profile__info{
+        margin-top:26px;
+    }  
+}

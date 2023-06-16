@@ -1,0 +1,17 @@
+.form__edit{
+    width:430px;
+    height:330px;
+    background-color: hsl(0, 0%, 100%);
+    color: #000000;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+
+@media (max-width:320px){
+    .form__edit{
+        width:282px;
+        height:322px;
+        margin-right: 0;
+    }
+    
+}

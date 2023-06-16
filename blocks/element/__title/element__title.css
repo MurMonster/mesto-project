@@ -1,0 +1,15 @@
+.element__title{
+    width:241px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 20px 32px 21px;
+}
+
+@media (max-width:320px){
+    .element__title{
+        width: 87.234%;
+        margin: 25px 15px 31px 21px;
+    }
+    
+}

@@ -1,0 +1,17 @@
+.elements{
+    width: 880px;
+    margin: 51px auto 0;
+    display: grid;
+    gap: 17px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width:320px) {
+    .elements{
+        width:88.125%;
+        margin-top:36px;
+        gap:20px;
+        grid-template-columns: 1fr;
+    }
+    
+}
