@@ -1,12 +1,12 @@
 .footer{
     margin:67px auto 0;
-    width: 880px;
+    max-width: 880px;
 }
 
 @media (max-width:320px){
     .footer{
         margin: 48px auto 36px;
-        width:88.125%;
+        max-width:88.125%;  
     }
     
 }

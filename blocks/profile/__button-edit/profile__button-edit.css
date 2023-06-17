@@ -1,0 +1,29 @@
+.profile__button-edit{
+    background-size: 10px 10px;
+    background-color: transparent;
+    background-image: url("../../../images/Vector_edit.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10px; 
+    height: 10px;
+    margin: 37px;
+    padding: 7px;
+    opacity: 1;
+    border: 1px solid rgba(255,255,255,1);
+}
+
+.profile__button-edit:hover{
+    opacity: 0.6;
+    cursor: pointer;
+    border-color: rgba(255,255,255,0.6);
+}
+
+@media (max-width:320px){
+    .profile__button-edit{
+        background-size: 7.5px 7.5px;
+        width:7.5px;
+        height:7.5px;
+        margin-top:8px;
+        padding: 5.25px;
+    }    
+}

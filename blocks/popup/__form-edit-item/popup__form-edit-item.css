@@ -1,0 +1,26 @@
+.popup__form-edit-item{
+    width:358px;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    outline: 0;  
+    display: block;
+    padding: 0 0 13px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 30px auto 0;
+}
+
+.popup__form-edit-item:first-child{
+    margin: 54px auto 0;
+}
+
+@media (max-width:320px){
+    .popup__form-edit-item{
+        width: 238px;
+    }
+    .popup__form-edit-item:first-child{
+        margin-top: 75px;
+    }
+}
