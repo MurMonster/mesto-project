@@ -9,12 +9,19 @@
     opacity: 1;
     position: absolute;
     top: -40px;
-    right: -8px;
+    right: -40px;
 }
 
 .popup__button-close:hover{
     opacity: 0.6;
     cursor: pointer;
+}
+
+@media (max-width:500px){
+    .popup__button-close{
+        right: 0;
+    }
+    
 }
 
 @media (max-width:320px){

@@ -1,9 +1,12 @@
 .profile__info{
-    display: flex;
+    max-width:38.1818%;
+    margin-left:30px;
 }
 
 @media (max-width:320px){
     .profile__info{
         margin-top:26px;
+        max-width: 100%;
+        margin-left: 0;
     }  
 }

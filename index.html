@@ -1,82 +1,124 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta
       name="viewport"
       content="width=device-width, height=device-height, initial-scale=1.0"
-    />
-    <link rel="stylesheet" href="./pages/index.css" />
+    >
+    <link rel="stylesheet" href="./pages/index.css" >
     <title>Mesto</title>
   </head>
   <body class="page">
-    <div class="popup">
+    <div class="popup popup_opened">
       <div class="popup__container">
         <button type="button" class="popup__button-close"></button>
         <form class="popup__form-edit" name="form-edit">
-        <h2 class="popup__form-edit-heading">Редактировать профиль</h2>
-          <input type="text" value="Боб" name="input-heading" class="popup__form-edit-item">
-          <input type="text" value="Кинозвезда" name="input-description" class="popup__form-edit-item">
-        <button class="popup__button-submit" type="submit">Сохранить</button>
-      </form>
+          <h2 class="popup__form-edit-heading">Редактировать профиль</h2>
+          <input
+            type="text"
+            value="Боб"
+            name="input-heading"
+            class="popup__form-edit-item"
+          >
+          <input
+            type="text"
+            value="Кинозвезда"
+            name="input-description"
+            class="popup__form-edit-item"
+          >
+          <button class="popup__button-submit" type="submit">Сохранить</button>
+        </form>
       </div>
     </div>
     <header class="header">
-        <img class="header__logo" src="./images/logo.svg" alt="логотипчик">
+      <img class="header__logo" src="./images/logo.svg" alt="логотипчик" >
     </header>
     <main>
       <section class="profile">
         <div class="profile__container">
-          <img class="profile__avatar" src="./images/avatar.png" alt="весёлый миньон">
+          <img
+            class="profile__avatar"
+            src="./images/avatar.png"
+            alt="весёлый миньон"
+          >
           <div class="profile__info">
-            <div class="profile__text">
-              <h1 class="profile__title">Боб</h1>
-              <p class="profile__subtitle">Кинозвезда</p>
+            <div class="profile__info-main">
+              <h1 class="profile__info-title">
+                Боб1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+              </h1>
+              <button type="button" class="profile__button-edit"></button>
             </div>
-            <button type="submit" class="profile__button-edit"></button>
+            <p class="profile__info-subtitle">
+              Кинозвезда22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+            </p>
           </div>
+          <button class="profile__button-add" type="button"></button>
         </div>
-        <button class="profile__button-add" type="button"></button>
       </section>
       <section class="elements">
         <div class="element">
-          <img class="element__image" src="./images/image1.jpg" alt="Фото профиля">
+          <img
+            class="element__image"
+            src="./images/image1.jpg"
+            alt="Миньон агент 007"
+          >
           <div class="element__title">
             <h2 class="element__title-text">Опасный</h2>
             <button class="element__title-icon" type="button"></button>
           </div>
         </div>
         <div class="element">
-          <img class="element__image" src="./images/image2.jpg" alt="Фото профиля">
+          <img
+            class="element__image"
+            src="./images/image2.jpg"
+            alt="Улыбающийся миньон"
+          >
           <div class="element__title">
             <h2 class="element__title-text">Хэлоу</h2>
             <button class="element__title-icon" type="button"></button>
-          </div> 
+          </div>
         </div>
         <div class="element">
-          <img class="element__image" src="./images/image7.jpg" alt="Фото профиля"> 
+          <img
+            class="element__image"
+            src="./images/image7.jpg"
+            alt="Радостный миньон с бананом"
+          >
           <div class="element__title">
             <h2 class="element__title-text">Бананааааа</h2>
             <button class="element__title-icon" type="button"></button>
           </div>
         </div>
         <div class="element">
-            <img class="element__image" src="./images/image4.jpg" alt="Фото профиля"> 
-            <div class="element__title">
-              <h2 class="element__title-text">Модельные</h2>
-              <button class="element__title-icon" type="button"></button>
-            </div>
+          <img
+            class="element__image"
+            src="./images/image4.jpg"
+            alt="Миньон с драгоценностями"
+          >
+          <div class="element__title">
+            <h2 class="element__title-text">Модельные</h2>
+            <button class="element__title-icon" type="button"></button>
+          </div>
         </div>
         <div class="element">
-          <img class="element__image" src="./images/image5.jpg" alt="Фото профиля"> 
+          <img
+            class="element__image"
+            src="./images/image5.jpg"
+            alt="Миньон - король семи королевств"
+          >
           <div class="element__title">
             <h2 class="element__title-text">Игра престолов</h2>
             <button class="element__title-icon" type="button"></button>
           </div>
         </div>
         <div class="element">
-          <img class="element__image" src="./images/image6.jpg" alt="Фото профиля"> 
+          <img
+            class="element__image"
+            src="./images/image6.jpg"
+            alt="Миньон - джедай"
+          >
           <div class="element__title">
             <h2 class="element__title-text">Приветствую тебя я</h2>
             <button class="element__title-icon" type="button"></button>

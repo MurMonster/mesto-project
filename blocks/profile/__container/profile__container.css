@@ -1,5 +1,7 @@
 .profile__container{
     display: flex;
+    max-width: 100%;
+    align-items: center;
 }
 
 @media (max-width:320px){

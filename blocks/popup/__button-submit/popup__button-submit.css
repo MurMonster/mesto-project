@@ -1,6 +1,6 @@
 .popup__button-submit{
     margin: 48px auto 0;
-    width:358px;
+    width: 83.2558%;
     height: 50px;
     background: rgba(0,0,0,1);
     border-radius: 2px;
@@ -13,6 +13,7 @@
     line-height: 22px;
     text-align: center;
     border: none;
+    margin-bottom: 37px;;
 
 }
 
@@ -23,10 +24,11 @@
 
 @media (max-width:320px){
     .popup__button-submit{
-        width: 238px;
+        width: 84.39716%;
         height: 46px;
         margin-top: 45px;
         font-size: 14px;
         line-height: 17px;
+        margin-bottom: 25px;
     }   
 }

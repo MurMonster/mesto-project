@@ -1,4 +1,4 @@
-.profile__title{
+.profile__info-title{
     margin:0;
     font-style: normal;
     font-weight: 500;
@@ -7,11 +7,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 294px;
+    max-width: 87.5%;
 }
 
 @media (max-width:320px){
-    .profile__title{
+    .profile__info-title{
         font-size: 27px;
         line-height: 33px;
         text-align: center;
