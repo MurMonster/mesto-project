@@ -3,9 +3,16 @@
     max-width: 880px;
 }
 
-@media (max-width:320px){
+@media (max-width:900px){
     .footer{
-        margin: 48px auto 36px;
+        max-width:581px;  
+    }
+    
+}
+
+@media (max-width:581px){
+    .footer{
+        margin: 48px auto 33px;
         max-width:88.125%;  
     }
     

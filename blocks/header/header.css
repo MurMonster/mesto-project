@@ -5,6 +5,12 @@
     margin: 45px auto 0;
 }
 
+@media (max-width: 900px){
+    .header{
+        max-width: 581px;
+    }
+}
+
 @media (max-width: 320px){
     .header{
         max-width: 100%;

@@ -2,7 +2,7 @@
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     box-shadow: 0 0 25px rgba(0,0,0,0.15);
     max-width: 430px;
     margin:auto;

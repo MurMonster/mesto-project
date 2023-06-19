@@ -8,14 +8,16 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 87.5%;
+    height: 39px;
 }
 
-@media (max-width:320px){
+@media (max-width:581px){
     .profile__info-title{
         font-size: 27px;
         line-height: 33px;
         text-align: center;
         max-width: 189px;
+        height: 26px;
     }
     
 }

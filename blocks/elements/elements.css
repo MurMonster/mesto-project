@@ -7,9 +7,17 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-@media (max-width:320px) {
+@media(max-width:900px){
     .elements{
-        max-width:88.125%;
+        max-width:581px;
+        margin-top:36px;
+        grid-template-columns: 1fr 1fr;
+    }    
+}
+
+@media (max-width:581px) {
+    .elements{
+        max-width:282px;
         margin-top:36px;
         grid-template-columns: 1fr;
     }
