@@ -1,12 +1,18 @@
 .profile__container{
     display: flex;
-    max-width: 100%;
-    align-items: center;
+    max-width: 730px;
 }
 
-@media (max-width:581px){
+@media (max-width:900px){
+    .profile__container{
+        max-width: 431px;
+    }
+}
+
+@media (max-width:600px){
     .profile__container{
         flex-direction: column;
+        max-width: 100%;
         align-items: center;
     }
 }

@@ -2,7 +2,6 @@
     max-width: 880px;
     margin: 40px auto 0;
     display: flex;
-    align-items: center;
 }
 
 @media(max-width:900px){
@@ -11,11 +10,10 @@
     }    
 }
 
-@media (max-width:581px){
+@media (max-width:600px){
     .profile{
         max-width: 282px;
         margin-top:42px;
         flex-direction: column;
-        align-items: center;
     }
 }

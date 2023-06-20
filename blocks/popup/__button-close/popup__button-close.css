@@ -17,12 +17,12 @@
     cursor: pointer;
 }
 
-@media (max-width:581px){
+@media (max-width:600px){
     .popup__button-close{
         width:20px;
         height:20px;
-        margin: 0 0 16px 0;
         right: 0;
+        top:-35px;
     }
     
 }

@@ -1,10 +1,9 @@
 .profile__info-main{
     max-width: 100%;
     display: flex;
-    align-items: center;
 }
 
-@media (max-width:320px) {
+@media (max-width:600px) {
     .profile__info-main{
         justify-content: center;
     }

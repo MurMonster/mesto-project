@@ -7,3 +7,9 @@
     max-width: 430px;
     margin:auto;
 }
+
+@media (max-width:600px) {
+    .popup__container{
+        max-width: 282px;
+    }
+}

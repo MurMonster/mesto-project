@@ -15,10 +15,9 @@
     }    
 }
 
-@media (max-width:581px) {
+@media (max-width:600px) {
     .elements{
         max-width:282px;
-        margin-top:36px;
         grid-template-columns: 1fr;
     }
     

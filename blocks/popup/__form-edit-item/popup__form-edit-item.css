@@ -2,7 +2,7 @@
     border: 0;
     border-bottom: 1px solid rgba(0,0,0,0.2); 
     width:83.2558%;
-    padding: 0 0 12.2px 0;
+    padding: 0 0 9.2px 0;
     outline: 0;  
     display: block;
     font-style: normal;
@@ -10,14 +10,13 @@
     font-size: 14px;
     line-height: 17px;
     margin: 30px auto 0;
-    height: 14px;
 }
 
 .popup__form-edit-item:first-of-type{
-    margin: 54px auto 0;
+    margin: 48px auto 0;
 }
 
-@media (max-width:581px){
+@media (max-width:600px){
     .popup__form-edit-item{
         width: 84.39716%;
     }

@@ -7,17 +7,22 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 87.5%;
-    height: 39px;
+    max-width: 294px;
 }
 
-@media (max-width:581px){
+@media (max-width:900px){
+    .profile__info-title{
+        max-width: 198px;
+    }
+    
+}
+
+@media (max-width:600px){
     .profile__info-title{
         font-size: 27px;
         line-height: 33px;
         text-align: center;
-        max-width: 189px;
-        height: 26px;
+        max-width: 254px;
     }
     
 }
