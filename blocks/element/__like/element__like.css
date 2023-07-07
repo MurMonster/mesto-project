@@ -1,4 +1,4 @@
-.element__title-icon{
+.element__like{
     background-size: 22px 19px;
     background-color: transparent;
     background-image: url("../../../images/Vector.svg");
@@ -12,11 +12,8 @@
     border: none;
 }
 
-.element__title-icon:hover{
+.element__like:hover{
     opacity: 0.5;
     cursor: pointer;
 }
 
-.element__title-icon:active{
-    background-image: url("../../../images/Union.svg");
-}

@@ -1,0 +1,13 @@
+.popup__form-add{
+    width:430px;
+    background-color: hsl(0, 0%, 100%);
+    color: #000000;
+    border-radius: 10px;
+}
+
+@media (max-width:600px){
+    .popup__form-add{
+        max-width:282px;
+    }
+    
+}

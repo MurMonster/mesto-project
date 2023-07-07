@@ -1,0 +1,33 @@
+.popup__button-create{
+    margin: 48px auto 37px;
+    width: 83.2558%;
+    height: 50px;
+    background: rgba(0,0,0,1);
+    border-radius: 2px;
+    color: #ffffff;
+    display: block;
+    padding: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border: none;
+
+}
+
+.popup__button-create:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.8);
+}
+
+@media (max-width:600px){
+    .popup__button-create{
+        width: 84.39716%;
+        height: 46px;
+        margin-top: 45px;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 25px;
+    }   
+}

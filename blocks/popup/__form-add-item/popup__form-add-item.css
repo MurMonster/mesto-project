@@ -1,0 +1,26 @@
+.popup__form-add-item{
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.2); 
+    width:83.2558%;
+    padding: 0 0 9.2px 0;
+    outline: 0;  
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 30px auto 0;
+}
+
+.popup__form-add-item:first-of-type{
+    margin: 48px auto 0;
+}
+
+@media (max-width:600px){
+    .popup__form-add-item{
+        width: 84.39716%;
+    }
+    .popup__form-add-item:first-of-type{
+        margin-top: 75px;
+    }
+}
