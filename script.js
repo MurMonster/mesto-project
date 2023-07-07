@@ -56,10 +56,6 @@ const initialCards = [ //работа с добавлением карточек
     link: "./images/кофе.png",
   },
   {
-    name: "Уютно",
-    link: "./images/одеяло.png",
-  },
-  {
     name: "Тело",
     link: "./images/купальник.png",
   },
