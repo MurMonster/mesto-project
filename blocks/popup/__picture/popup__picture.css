@@ -1,15 +1,3 @@
 .popup__picture{
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
     background-color: rgba(0,0,0,.899);
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.7s, opacity 0.5s ;
-    z-index: 200;
 }

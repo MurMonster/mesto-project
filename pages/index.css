@@ -3,7 +3,6 @@
 @import url(../vendor/fonts/fonts.css);
 
 @import url(../blocks/popup/popup.css);
-@import url(../blocks/popup/__add/popup_add.css);
 @import url(../blocks/popup/__form-edit/popup__form-edit.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__form-edit-item/popup__form-edit-item.css);

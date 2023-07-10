@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta
       name="viewport"
       content="width=device-width, height=device-height, initial-scale=1.0"
     >
-    <link rel="stylesheet" href="./pages/index.css" >
+    <link rel="stylesheet" href="./pages/index.css">
     <title>Mesto</title>
   </head>
   <body class="page">
-    <div class="popup">
+    <header class="header">
+      <img class="header__logo" src="./images/logo.svg" alt="логотипчик">
+    </header>
+    <main>
+      <section class="profile">
+        <div class="profile__container">
+          <img
+            class="profile__avatar"
+            src="./images/аватарка.png"
+            alt="лицо девушки абстрактное"
+          >
+          <div class="profile__info">
+            <div class="profile__info-main">
+              <h1 class="profile__info-title">Море в душе</h1>
+              <button type="button" class="profile__button-edit"></button>
+            </div>
+            <p class="profile__info-subtitle">Море души</p>
+          </div>
+        </div>
+        <button class="profile__button-add" type="button"></button>
+      </section>
+      <section class="elements"></section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">&#169; 2023. Анастасия Овчинникова</p>
+    </footer>
+    <script src="script.js"></script>
+    <div class="popup popup__edit">
       <div class="popup__container">
         <button type="button" class="popup__button-close"></button>
         <form class="popup__form-edit" name="form-edit">
@@ -33,7 +60,7 @@
       </div>
     </div>
     <!--начало формы с карточками-->
-    <div class="popup__add">
+    <div class="popup popup__add">
       <div class="popup__container">
         <button type="button" class="popup__button-close"></button>
         <form class="popup__form-add" name="form-add">
@@ -56,47 +83,22 @@
     </div>
     <!--формы с карточками (конец)-->
     <!--открытие картинки (начало)-->
-    <div class="popup__picture">
+    <div class="popup popup__picture">
       <div class="popup__picture-container">
         <button type="button" class="popup__button-close"></button>
         <figure class="popup__picture-figure">
-          <img class="popup__picture-big" src="https://i.pinimg.com/564x/cc/9b/e6/cc9be6a424dbe5456c09017664724c71.jpg">
-          <figcaption class = popup__picture-caption>Нямка!</figcaption>
+          <img
+            class="popup__picture-big"
+            src="https://i.pinimg.com/564x/cc/9b/e6/cc9be6a424dbe5456c09017664724c71.jpg"
+          >
+          <figcaption class="popup__picture-caption">Нямка!</figcaption>
         </figure>
       </div>
     </div>
     <!--открытие картинки (конец)-->
-    <header class="header">
-      <img class="header__logo" src="./images/logo.svg" alt="логотипчик" >
-    </header>
-    <main>
-      <section class="profile">
-        <div class="profile__container">
-          <img
-            class="profile__avatar"
-            src="./images/аватарка.png"
-            alt="лицо девушки абстрактное"
-          >
-          <div class="profile__info">
-            <div class="profile__info-main">
-              <h1 class="profile__info-title">Море в душе</h1>
-              <button type="button" class="profile__button-edit"></button>
-            </div>
-            <p class="profile__info-subtitle">Море души</p>
-          </div>
-        </div>
-        <button class="profile__button-add" type="button"></button>
-      </section>
-      <section class="elements">
-      </section>
-    </main>
-    <footer class="footer">
-      <p class="footer__copyright">&#169; 2023. Анастасия Овчинникова</p>
-    </footer>
-    <script src="script.js"></script>
     <template id="element-template" class="template-element">
       <div class="element">
-        <img class="element__image" alt="Девушка на причале в одеяле" >
+        <img class="element__image" alt="Девушка на причале в одеяле">
         <button class="element__trash" type="button"></button>
         <div class="element__title">
           <h2 class="element__title-text">Дума</h2>
