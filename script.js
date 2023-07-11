@@ -10,6 +10,13 @@ const pictureCaption = document.querySelector(".popup__picture-caption");
 const profileTitle = document.querySelector(".profile__info-title");
 const profileSubtitle = document.querySelector(".profile__info-subtitle");
 const initialCardsList = document.querySelector(".elements");
+const nameInput = document.querySelector(
+  // Находим поля формы в DOM
+  '.popup__form-edit-item[name="input-heading"]'
+);
+const jobInput = document.querySelector(
+  '.popup__form-edit-item[name="input-description"]'
+);
 
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
@@ -21,19 +28,20 @@ profile.addEventListener("click", function (evt) {
   openPopup(popupAdd);
 });
 buttonEdit.addEventListener("click", function (evt) {
+  nameInput.value = profileTitle.textContent; //вставка при открытии попапа
+  jobInput.value = profileSubtitle.textContent;
   openPopup(popupEdit);
 });
-buttonsClose.forEach((btn) =>
-  btn.addEventListener("click", function (event) {
-    if (event.target.matches(".popup__edit .popup__button-close")) {
-      closePopup(popupEdit);
-    } else if (event.target.matches(".popup__add .popup__button-close")) {
-      closePopup(popupAdd);
-    } else if (event.target.matches(".popup__picture .popup__button-close")) {
-      closePopup(popupPicture);
-    }
-  })
-); //окончание акцивации открытия и закрытия модального окна
+// находим все крестики проекта по универсальному селектору
+const closeButtons = document.querySelectorAll('.popup__button-close');
+
+// с окончанием `s` нужно обязательно, так как много кнопок
+closeButtons.forEach((button) => {
+  // находим 1 раз ближайший к крестику попап 
+  const popup = button.closest('.popup');
+  // устанавливаем обработчик закрытия на крестик
+  button.addEventListener('click', () => closePopup(popup));
+});
 
 function createCard(element) {
   const initialCardTemplate = document.querySelector("#element-template");
@@ -44,25 +52,42 @@ function createCard(element) {
   initialCardElement.querySelector(".element__title-text").textContent =
     element.name; // Укажите здесь значение поля career каждого перебираемого элемента;
 
+const buttonRemoveList = initialCardElement.querySelector(".element__trash");
+buttonRemoveList.addEventListener("click", function (evt) {
+  evt.target.closest(".element").remove();
+}); //мусорка
+const listButtonLike = initialCardElement.querySelector(".element__like");
+listButtonLike.addEventListener("click", function (evt) {
+  if (evt.target.classList.contains("element__like_active")) {
+    evt.target.classList.remove("element__like_active");
+  } else {
+    evt.target.classList.add("element__like_active");
+  }
+}); //конец лайков
+image.addEventListener("click", function (picture) {
+  openPopup(popupPicture); //открываем попап с картинкой
+  pictureBig.src = picture.target.src; //подмена src (куда) => откуда
+  pictureBig.alt = picture.target.alt;
+  const currentElement = picture.target.closest(".element"); //ищем ближайший элемент(картинку), в которой находимся (типо там устрицы)
+  const elementText = currentElement.querySelector(
+    ".element__title-text"
+  ).textContent; //ищем подпись в ближайшем определенном блоке, который раньше выбрали
+  pictureCaption.textContent = elementText; // вносим в подпись шаблонного элемента новую надпись
+}); //конец картинки большой
+
   return initialCardElement;
 }
 
 //№1 из задания (сохранение данных в форме)
 const formElement = document.querySelector(".popup__form-edit"); // Находим форму в DOM
-const nameInput = document.querySelector(
-  // Находим поля формы в DOM
-  '.popup__form-edit-item[name="input-heading"]'
-);
-const jobInput = document.querySelector(
-  '.popup__form-edit-item[name="input-description"]'
-);
+
 function handleFormSubmit(evt) {
   evt.preventDefault(); // не нужны примитивные действия движка
   const nameInputValue = nameInput.value; // Выбираю элементы, куда должны быть вставлены значения полей
   const jobInputValue = jobInput.value; // Выбираю элементы, куда должны быть вставлены значения полей
   profileTitle.textContent = nameInputValue; // Вставляю новые значения с помощью textContent
   profileSubtitle.textContent = jobInputValue; // Вставляю новые значения с помощью textContent
-  popupEdit.classList.remove("popup_opened"); //закрытие автоматическое модального окна
+  closePopup(popupEdit);
 }
 formElement.addEventListener("submit", handleFormSubmit); // Прикрепляем обработчик к форме: он будет следить за событием “submit” - «отправка»
 const initialCards = [
@@ -123,40 +148,9 @@ window.onload = function () {
     const newCard = createCard(element);
     initialCardsList.append(newCard);
   });
-
-  const listButtonLike = document.querySelectorAll(".element__like"); //ставлю лайк № 5
-  listButtonLike.forEach(function (element) {
-    element.addEventListener("click", function (evt) {
-      if (evt.target.classList.contains("element__like_active")) {
-        evt.target.classList.remove("element__like_active");
-      } else {
-        evt.target.classList.add("element__like_active");
-      }
-    });
-  });
-  const buttonRemoveList = document.querySelectorAll(".element__trash"); // удаляю карточки № 6
-  buttonRemoveList.forEach(function (element) {
-    element.addEventListener("click", function (evt) {
-      evt.target.closest(".element").remove();
-    });
-  });
-  //открытие картинки(просмотр фото)
-  const elementImage = document.querySelectorAll(".element__image"); //
-  elementImage.forEach(function (photo) {
-    photo.addEventListener("click", function (picture) {
-      openPopup(popupPicture); //открываем попап с картинкой
-      pictureBig.src = picture.target.src; //подмена src (куда) => откуда
-      pictureBig.alt = picture.target.alt;
-      const currentElement = picture.target.closest(".element"); //ищем ближайший элемент(картинку), в которой находимся (типо там устрицы)
-      const elementText = currentElement.querySelector(
-        ".element__title-text"
-      ).textContent; //ищем подпись в ближайшем определенном блоке, который раньше выбрали
-      pictureCaption.textContent = elementText; // вносим в подпись шаблонного элемента новую надпись
-    });
-  });
 };
-//задание №4. добавление карточек
-const FormAddElement = document.querySelector(".popup__form-add");
+//задание №4. добавление карточек (создание карточек)
+const formAddElement = document.querySelector(".popup__form-add");
 const CardImage = document.querySelector(
   //находим поля формы в DOM
   '.popup__form-add-item[name="input-heading"]'
@@ -164,6 +158,7 @@ const CardImage = document.querySelector(
 const CardLink = document.querySelector(
   '.popup__form-add-item[name="input-description"]'
 );
+
 function handleFormAdd(evt) {
   evt.preventDefault();
   const CardImageValue = CardImage.value;
@@ -171,31 +166,9 @@ function handleFormAdd(evt) {
   const ElementsContainer = document.querySelector(".elements");
   const newCard = createCard({ name: CardImageValue, link: CardLinkValue });
   ElementsContainer.prepend(newCard);
-  const LastCard = document.querySelector(".element");
-  const listButtonLike = LastCard.querySelector(".element__like");
-  const buttonRemoveList = LastCard.querySelector(".element__trash");
-  const elementImage = LastCard.querySelector(".element__image");
-  buttonRemoveList.addEventListener("click", function (evt) {
-    evt.target.closest(".element").remove();
-  });
-  listButtonLike.addEventListener("click", function (evt) {
-    if (evt.target.classList.contains("element__like_active")) {
-      evt.target.classList.remove("element__like_active");
-    } else {
-      evt.target.classList.add("element__like_active");
-    }
-  });
-  elementImage.addEventListener("click", function (picture) {
-    openPopup(popupPicture); //открываем попап с картинкой
-    pictureBig.src = picture.target.src; //подмена src (куда) => откуда
-    const currentElement = picture.target.closest(".element"); //ищем ближайший элемент(картинку), в которой находимся (типо там устрицы)
-    const elementText = currentElement.querySelector(
-      ".element__title-text"
-    ).textContent; //ищем подпись в ближайшем определенном блоке, который раньше выбрали
-    pictureCaption.textContent = elementText; // вносим в подпись шаблонного элемента новую надпись
-  });
+
   evt.target.reset();
   closePopup(popupAdd);
 }
-FormAddElement.addEventListener("submit", handleFormAdd);
+formAddElement.addEventListener("submit", handleFormAdd);
 //конец задания № 4
