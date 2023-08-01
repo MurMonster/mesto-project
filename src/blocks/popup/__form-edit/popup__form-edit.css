@@ -1,12 +1,13 @@
-.popup__form-add{
+.popup__form-edit{
     width:430px;
     background-color: hsl(0, 0%, 100%);
     color: #000000;
     border-radius: 10px;
+    z-index: 250;
 }
 
 @media (max-width:600px){
-    .popup__form-add{
+    .popup__form-edit{
         max-width:282px;
     }
     

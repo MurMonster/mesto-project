@@ -1,0 +1,31 @@
+{
+  "name": "yandex_praktikum",
+  "version": "0.0.1",
+  "description": "+ Описание проекта: Проект представляет собой адаптивную веб-страницу, включающую в себя набор блоков различного формата, а также адаптивную встроенную форму, которая в дальнейшем будет усовершенствована за счет в недрения в проект языка программирования Java Script.",
+  "main": "script.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.32.0",
+    "jquery": "^3.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.8.1",
+    "cssnano": "^6.0.1",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss-loader": "^7.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

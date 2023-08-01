@@ -1,4 +1,4 @@
-.popup__form-edit-item{
+.popup__form-item{
     border: 0;
     border-bottom: 1px solid rgba(0,0,0,0.2); 
     width:83.2558%;
@@ -12,15 +12,15 @@
     margin: 30px auto 0;
 }
 
-.popup__form-edit-item:first-of-type{
+.popup__form-item:first-of-type{
     margin: 48px auto 0;
 }
 
 @media (max-width:600px){
-    .popup__form-edit-item{
+    .popup__form-item{
         width: 84.39716%;
     }
-    .popup__form-edit-item:first-of-type{
+    .popup__form-item:first-of-type{
         margin-top: 75px;
     }
 }

@@ -7,19 +7,18 @@
       name="viewport"
       content="width=device-width, height=device-height, initial-scale=1.0"
     >
-    <link rel="stylesheet" href="./pages/index.css">
     <title>Mesto</title>
   </head>
   <body class="page">
     <header class="header">
-      <img class="header__logo" src="./images/logo.svg" alt="логотипчик">
+      <img class="header__logo" src="<%=require('./images/logo.svg')%>" alt="логотипчик">
     </header>
     <main>
       <section class="profile">
         <div class="profile__container">
           <img
             class="profile__avatar"
-            src="./images/аватарка.png"
+            src="<%=require('./images/аватарка.png')%>"
             alt="лицо девушки абстрактное"
           >
           <div class="profile__info">
@@ -40,20 +39,28 @@
     <div class="popup popup__edit">
       <div class="popup__container">
         <button type="button" class="popup__button-close"></button>
-        <form class="popup__form-edit" name="form-edit">
+        <form class="popup__form-edit" name="form-edit" novalidate>
           <h2 class="popup__form-edit-heading">Редактировать профиль</h2>
           <input
+          id = "input-name"
             type="text"
             value="Море в душе"
             name="input-heading"
-            class="popup__form-edit-item"
+            class="popup__form-item" required minlength="2" maxlength="40" pattern="[a-zA-Za-яА-Я\s\-]*"
           >
+
+          <span class="input-name-error popup__input-error"></span>
+
           <input
+            id ="input-description"
             type="text"
             value="Море души"
             name="input-description"
-            class="popup__form-edit-item"
+            class="popup__form-item" required minlength="2" maxlength="200" pattern="[a-zA-Za-яА-Я\s\-]*"
           >
+
+          <span class="input-description-error popup__input-error"></span>
+
           <button class="popup__button-submit" type="submit">Сохранить</button>
         </form>
       </div>
@@ -62,22 +69,26 @@
     <div class="popup popup__add">
       <div class="popup__container">
         <button type="button" class="popup__button-close"></button>
-        <form class="popup__form-add" name="form-add">
+        <form class="popup__form-add" name="form-add" novalidate>
           <h2 class="popup__form-add-heading">Новое место</h2>
           <input
+            id = "input-head"
             type="text"
             value=""
             name="input-heading"
             placeholder="Название"
-            class="popup__form-add-item"
+            class="popup__form-item" required minlength="2" maxlength="30" pattern="[a-zA-Za-яА-Я\s\-]*"
           >
+          <span class="input-head-error popup__input-error"></span>
           <input
-            type="text"
+            id = "input-link"
+            type="url"
             value=""
             name="input-description"
             placeholder="Ссылка на картинку"
-            class="popup__form-add-item"
+            class="popup__form-item" required
           >
+          <span class="input-link-error popup__input-error"></span>
           <button class="popup__button-create" type="submit">Создать</button>
         </form>
       </div>
@@ -97,7 +108,6 @@
       </div>
     </div>
     <!--открытие картинки (конец)-->
-    <script src="script.js"></script>
     <template id="element-template" class="template-element">
       <div class="element">
         <img class="element__image" alt="Девушка на причале в одеяле">

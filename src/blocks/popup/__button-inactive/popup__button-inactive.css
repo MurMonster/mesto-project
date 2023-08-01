@@ -1,0 +1,14 @@
+.popup__button-inactive{
+    background: #fff;
+    border: 2px solid #000;
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+}
+.popup__button-inactive:hover{
+    cursor: none;
+    background: #fff;
+}

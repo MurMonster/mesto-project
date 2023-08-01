@@ -3,4 +3,5 @@
     max-height:75vw;
     position: relative;
     margin:auto;
+    z-index: 250;
 } 
